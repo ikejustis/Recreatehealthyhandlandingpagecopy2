@@ -5,6 +5,18 @@
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>Recreate HealthyHand Landing Page (Copy)</title>
+      <!-- SPA fallback support for GitHub Pages (restores deep links after 404 redirect) -->
+      <script>
+        (function () {
+          var params = new URLSearchParams(window.location.search);
+          var p = params.get("p");
+          if (!p) return;
+          var q = params.get("q") || "";
+          var hash = params.get("h") || "";
+          var newUrl = p + (q ? "?" + q : "") + (hash ? "#" + hash : "");
+          window.history.replaceState(null, "", newUrl);
+        })();
+      </script>
     </head>
 
     <body>
